@@ -4,89 +4,110 @@
     box-sizing: border-box;
 }
 
+.container {
+    display: flex;
+    height: calc(100vh - 50px);
+    background-color: brown;
 
-
-
-.container-viewport {
-    height: 100vh;
-    background-color: blue; 
-}
-
-
-
-header .nav-upgrade {
-    text-align: end;
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    color: white;
 }
 
 header .nav-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 230px;
-    height: calc(100% - 50px);
+    height: 100%;
+    min-width: 150px;
     background-color: red;
-
-    position: absolute;
     
 }
 
-header .nav-left .logo-nav {
+.container-video {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+* .img {
+    height: auto;
     width: 100%;
-    min-height: 75px;
-    background-color: brown;
-}
-
-header .nav-left .playlist-nav {
-    background-color: brown;
 }
 
 
 
 
+main {
+    flex-grow: 1;
+}
+
+main .nav-top {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+    min-height: 50px;
+
+    background-color: aqua;
+}
 
 
+.container-overflow {
+    display: flex;
+    
+    
+}
 
+main .video-category {
+    
+    padding-left: 10px;
+    padding-right: 10px;
+  
+}
 
-.footer-nav {
+main .video-category .category ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none;
+    font-size: 0.7em;
+}
+
+main .video-category .video {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 50px;
     width: 100%;
-    background-color: grey;
-    position: absolute;
-    bottom: 0px;
-}
-
-.footer-nav .footer-left {
-    display: flex;
-}
-
-
-
-
-@media screen and (max-width: 991px) {
+    height: 200px;
+    flex-wrap: wrap;
+   
     
 }
 
-@media screen and (max-width: 767px) {
-    .footer-nav .icons-footer {
-        display: flex;
-        flex-direction: column;
-    }
+main .video-category .video .card {
+    display: flex;
+    width: calc(100% / 6);
+    min-width: 130px;
+    border: solid 2px black;
+    overflow-y: auto;
 }
 
-@media screen and (max-width: 575px) {
-    header .nav-left .playlist-nav {
-        display: none;
-    }
 
-    header .nav-left {
-        max-width: 50px;
-    }
+
+
+
+
+
+
+
+
+
+footer .nav-footer {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+    background-color: blueviolet;
+    
 }
 
+footer .nav-footer .footer-left {
+    display: flex;
+    gap: 10px;
+}
